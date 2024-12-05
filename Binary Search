@@ -1,0 +1,22 @@
+Por Que a Lista Precisa Estar Ordenada?
+A lista deve estar ordenada para que o algoritmo de Busca Binária funcione corretamente, pois ele se baseia na organização dos elementos para decidir em qual metade continuar a busca. Caso a lista não esteja ordenada, não é possível garantir que o elemento procurado estará na metade esperada, o que torna o método ineficaz.
+
+Exemplos Práticos
+Lista Ordenada
+Lista: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+Alvo: 7
+
+Passos da Busca Binária:
+Primeiro meio: 9 (índice 4). Como 7 < 9, a busca continua na metade esquerda.
+Novo meio: 5 (índice 2). Como 7 > 5, a busca segue na metade direita.
+Novo meio: 7 (índice 3). Elemento encontrado.
+
+Lista Não Ordenada
+Lista: [11, 3, 7, 1, 9, 5, 13, 19, 17, 15]
+Alvo: 11
+
+Passos Tentados pela Busca Binária:
+Primeiro meio: 9 (índice 4). Como 11 > 9, a busca continua na metade direita.
+Novo meio: 19 (índice 7). Como 11 < 19, a busca segue na metade esquerda.
+Novo meio: 5 (índice 5). Como 11 > 5, a busca volta para a metade direita.
+Resultado: A busca falha porque as metades formadas não seguem uma ordem consistente, e o elemento 11 não é encontrado, apesar de estar presente na lista.
